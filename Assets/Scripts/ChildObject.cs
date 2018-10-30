@@ -10,7 +10,7 @@ public class ChildObject : MonoBehaviour {
     private bool hasPulse;
     private int pulse;//rate for their pulse
     private bool canRespond;
-    private bool doesRepsoitionAirwayWork;
+    private bool doesRepositionAirwayWork;
     private bool doesRescueBreathsWork;
     private bool canUnderstand;
     private String tagGiven;
@@ -96,13 +96,13 @@ public class ChildObject : MonoBehaviour {
         this.canRespond = RandomTrueOrFalse();
         if (this.isBreathing)
         {
-            this.doesRepsoitionAirwayWork = false;//this should be what forces a refactor of the breathing rate
+            this.doesRepositionAirwayWork = false;//this should be what forces a refactor of the breathing rate
         }
         else
         {
-            this.doesRepsoitionAirwayWork = RandomTrueOrFalse();//this should be what forces a refactor of the breathing rate
+            this.doesRepositionAirwayWork = RandomTrueOrFalse();//this should be what forces a refactor of the breathing rate
         }
-        if (this.doesRepsoitionAirwayWork)
+        if (this.doesRepositionAirwayWork)
         {
             this.doesRescueBreathsWork = false;//this should be what forces a refactor of the breathing rate
         }
@@ -110,7 +110,6 @@ public class ChildObject : MonoBehaviour {
         {
             this.doesRescueBreathsWork = true;//this should be what forces a refactor of the breathing rate
         }
-        this.canRespond = RandomTrueOrFalse();
     }
 
     private void CreateYellow()
@@ -121,7 +120,7 @@ public class ChildObject : MonoBehaviour {
         this.hasPulse = true;
         this.pulse = NormalChildPulseGenerator();
         this.canRespond = true;
-        this.doesRepsoitionAirwayWork = false;//this should be what forces a refactor of the breathing rate
+        this.doesRepositionAirwayWork = false;//this should be what forces a refactor of the breathing rate
         this.doesRescueBreathsWork = false;//this should be what forces a refactor of the breathing rate
         this.canUnderstand = true;
     }
@@ -134,7 +133,7 @@ public class ChildObject : MonoBehaviour {
         this.hasPulse = true;
         this.pulse = NormalChildPulseGenerator();//average pulse values for children 75-115 or 70-110
         this.canRespond = true;
-        this.doesRepsoitionAirwayWork = false;//this should be what forces a refactor of the breathing rate
+        this.doesRepositionAirwayWork = false;//this should be what forces a refactor of the breathing rate
         this.doesRescueBreathsWork = true;//this should be what forces a refactor of the breathing rate
         this.canUnderstand = true;
     }
@@ -154,7 +153,7 @@ public class ChildObject : MonoBehaviour {
             this.pulse = 0;
         }
         this.canRespond = false;
-        this.doesRepsoitionAirwayWork = false;//this should be what forces a refactor of the breathing rate
+        this.doesRepositionAirwayWork = false;//this should be what forces a refactor of the breathing rate
         this.doesRescueBreathsWork = false;//this should be what forces a refactor of the breathing rate
         this.canUnderstand = false;
     }
@@ -287,7 +286,7 @@ public class ChildObject : MonoBehaviour {
 
     public void RepositionedTheAirway()
     {
-        if (this.doesRepsoitionAirwayWork)
+        if (this.doesRepositionAirwayWork)
         {
             this.breathingRate = NormalChildBreathing();
         }
