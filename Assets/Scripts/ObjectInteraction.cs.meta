@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 1232cf307ceb75543ae5ea223de0786d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - TagRedPrefab: {fileID: 1262298077985758, guid: 2f4851e69b8a71f4f884cff6c97f7f00,
+      type: 2}
+  - TagYellowPrefab: {fileID: 1293841403749418, guid: 5d96f565eb273654082d80edf7091af1,
+      type: 2}
+  - TagGreenPrefab: {fileID: 1302449571167948, guid: 86ad8ca7061c18f458f44eba17171022,
+      type: 2}
+  - TagBlackPrefab: {fileID: 1053702424628386, guid: 00fbcf6993c9b0d489355888ec0094ba,
+      type: 2}
+  - RescueBreathsPrefab: {fileID: 1416090790545914, guid: 4600057d8aabec1428ff3e14705a4ab3,
+      type: 2}
+  - PulsePrefab: {fileID: 1683148088736242, guid: 7127dad7464834e4c90084264382c497,
+      type: 2}
+  - PositionAirwayPrefab: {fileID: 1981691174534106, guid: 2950b7c38be006a4e975111626d789d2,
+      type: 2}
+  - PerfusionPrefab: {fileID: 1449010201832052, guid: bd25f84b74e0f7c4594213150a8b62c1,
+      type: 2}
+  - MentalStatusPrefab: {fileID: 1379806356022576, guid: 4d2812c792453764cb90eb4ec072f3da,
+      type: 2}
+  - CheckBreathingPrefab: {fileID: 1099736683406062, guid: f6d5c4904af8be140b808548d0afd03b,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

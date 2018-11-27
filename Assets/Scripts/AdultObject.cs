@@ -4,7 +4,8 @@ using UnityEngine;
 using System;
 
 
-public class AdultObject : MonoBehaviour {
+public class AdultObject : MonoBehaviour
+{
     private bool canWalk;
     private bool isBreathing;
     private int breathingRate;
@@ -118,6 +119,7 @@ public class AdultObject : MonoBehaviour {
                 break;
         }
     }
+
     private void CreateYellow()
     {
         this.canWalk = false;
@@ -128,6 +130,7 @@ public class AdultObject : MonoBehaviour {
         this.doesRepsoitionAirwayWork = false;//this should be what forces a refactor of the breathing rate
         this.canUnderstand = true;
     }
+
     private void CreateGreen()
     {
         this.canWalk = true;
@@ -139,6 +142,7 @@ public class AdultObject : MonoBehaviour {
         this.canUnderstand = true;
 
     }
+
     private void CreateBlack()
     {
         this.canWalk = false;
@@ -149,6 +153,7 @@ public class AdultObject : MonoBehaviour {
         this.doesRepsoitionAirwayWork = false;//this should be what forces a refactor of the breathing rate
         this.canUnderstand = false;
     }
+
     private bool IsBreathingRandomized()
     {
         System.Random rnd = new System.Random();
@@ -163,12 +168,14 @@ public class AdultObject : MonoBehaviour {
                 return true;
         }
     }
+
     private int CappRefilRandom(int lowBound, int highBound)
     {
         System.Random rnd = new System.Random();
         int randomNumber = rnd.Next(lowBound, highBound);
         return randomNumber;
     }
+
     private int RandomBreathingBelowThirty()
     {
         System.Random rnd = new System.Random();
@@ -191,6 +198,7 @@ public class AdultObject : MonoBehaviour {
         }
         return value;
     }
+
     private int RandomBreathingAboveThirty()
     {
         System.Random rnd = new System.Random();
@@ -210,6 +218,7 @@ public class AdultObject : MonoBehaviour {
         }
         return value;
     }
+
     public void RepositionedTheAirway()
     {
         if (this.doesRepsoitionAirwayWork)
@@ -221,26 +230,46 @@ public class AdultObject : MonoBehaviour {
             //nothing happends
         }
     }
-    public int CheckAirway()
+
+    public int CheckBreathingRate()
     {
         return this.breathingRate;
     }
+
     public int CheckCappilaryRefill()
     {
         return this.cappilaryRefill;
     }
+
+    public bool CanRespond()
+    {
+        return this.canRespond;
+    }
+
     public bool CanUnderstand()
     {
         return this.canUnderstand;
     }
 
+    public void SetTagGussed(String color)
+    {
+        this.tagGuessed = color;
+    }
+
+    public string GetTagGussed()
+    {
+        return this.tagGuessed;
+    }
+    
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        this.CreateAdult();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
