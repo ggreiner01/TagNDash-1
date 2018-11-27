@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class ChildObject : MonoBehaviour {
+public class ChildObject : MonoBehaviour
+{
     private bool canWalk;
     private bool isBreathing;
     private int breathingRate;
@@ -259,6 +260,7 @@ public class ChildObject : MonoBehaviour {
 
         return value;
     }
+
     private int AbnormalChildBreathing()
     {
         System.Random rnd = new System.Random();
@@ -296,6 +298,7 @@ public class ChildObject : MonoBehaviour {
         }
 
     }
+
     public void GaveRescueBreaths()
     {
         if (this.doesRescueBreathsWork)
@@ -308,7 +311,7 @@ public class ChildObject : MonoBehaviour {
         }
     }
 
-    public int CheckingBreathing()
+    public int CheckBreathingRate()
     {
         return this.breathingRate;
     }
@@ -318,22 +321,39 @@ public class ChildObject : MonoBehaviour {
         return this.pulse;
     }
 
-    public bool IsAbleToUnderstand()
+    public bool CanUnderstand()
     {
         return this.canUnderstand;
     }
-    public bool IsRespondingCoherently()
+
+    public bool CanRespond()
     {
         return this.canRespond;
     }
 
+    public void SetTagGussed(String color)
+    {
+        this.tagGuessed = color;
+    }
+
+    public string GetTagGussed()
+    {
+        return this.tagGuessed;
+    }
+    public int GetBreathingRate()
+    {
+        return this.breathingRate;
+    }
+
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        this.CreateChild();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
